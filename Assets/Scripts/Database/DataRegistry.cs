@@ -59,16 +59,22 @@ namespace Database
             _weapons.LoadData(connection, this);
             _accessories.LoadData(connection, this);
             _evolutions.LoadData(connection, this);
+            _monsterBases.LoadData(connection, this);
+            _monsterEntities.LoadData(connection, this);
         }
         
         // 데이터 리포지토리 필드 추가
         [OdinSerialize] private WeaponDataRepository _weapons;
         [OdinSerialize] private AccessoryDataRepository _accessories;
         [OdinSerialize] private ItemEvolutionDataRepository _evolutions;
+        [OdinSerialize] private MonsterBaseDataRepository _monsterBases;
+        [OdinSerialize] private MonsterEntityDataRepository _monsterEntities;
         
         // 데이터 리포지토리 getter 추가
         public static WeaponDataRepository Weapons => Instance._weapons;
         public static AccessoryDataRepository Accessories => Instance._accessories;
         public static ItemEvolutionDataRepository Evolutions => Instance._evolutions;
+        public static MonsterBaseDataRepository MonsterBases => Instance._monsterBases;
+        public static MonsterEntityDataRepository MonsterEntities => Instance._monsterEntities;
     }
 }
