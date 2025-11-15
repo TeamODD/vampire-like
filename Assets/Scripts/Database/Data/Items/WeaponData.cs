@@ -12,6 +12,6 @@ namespace Database.Data.Items
         [field: SerializeField] [Column("DESC_KEY")] public string DescKey { get; private set; }
         [field: SerializeField] [Column("RES_KEY")] public string ResKey { get; private set; }
         [field: SerializeField] [Column("KNOCK_BACK")] public int KnockBack { get; private set; }
-        [field: SerializeField] public List<WeaponStatData> Stats { get; private set; } = new();
+        [field: SerializeField] public Dictionary<int, WeaponStatData> Stats { get; private set; } = new();
     }
 }

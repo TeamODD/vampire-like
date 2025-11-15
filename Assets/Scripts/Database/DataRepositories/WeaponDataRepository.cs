@@ -16,7 +16,7 @@ namespace Database.DataRepositories
             var list2 = connection.Table<WeaponStatData>();
             foreach (var stat in list2)
             {
-                this[stat.ItemID].Stats.Add(stat);
+                this[stat.ItemID].Stats.Add(stat.Level, stat);
             }
         }
     }
