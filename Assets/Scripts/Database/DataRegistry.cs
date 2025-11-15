@@ -56,8 +56,13 @@ namespace Database
         protected override void LoadData(SQLiteConnection connection)
         {
             // 데이터 리포지토리 Load 메서드 추가
+            _weapons.LoadData(connection, this);
         }
         
         // 데이터 리포지토리 필드 추가
+        [OdinSerialize] private WeaponDataRepository _weapons;
+        
+        // 데이터 리포지토리 getter 추가
+        public static WeaponDataRepository Weapons => Instance._weapons;
     }
 }
