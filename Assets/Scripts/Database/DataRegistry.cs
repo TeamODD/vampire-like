@@ -57,12 +57,15 @@ namespace Database
         {
             // 데이터 리포지토리 Load 메서드 추가
             _weapons.LoadData(connection, this);
+            _accessories.LoadData(connection, this);
         }
         
         // 데이터 리포지토리 필드 추가
         [OdinSerialize] private WeaponDataRepository _weapons;
+        [OdinSerialize] private AccessoryDataRepository _accessories;
         
         // 데이터 리포지토리 getter 추가
         public static WeaponDataRepository Weapons => Instance._weapons;
+        public static AccessoryDataRepository Accessories => Instance._accessories;
     }
 }

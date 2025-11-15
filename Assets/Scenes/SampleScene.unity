@@ -412,6 +412,21 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _accessories
+      Entry: 7
+      Data: 2|Database.DataRepositories.AccessoryDataRepository, Assembly-CSharp
+    - Name: comparer
+      Entry: 9
+      Data: 1
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _databasePath: VAMPIRE.db
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
