@@ -1,7 +1,7 @@
 using SQLite4Unity3d;
 using UnityEngine;
 
-namespace Database.Data.Items
+namespace Database.Data.Monsters
 {
     [Table("MONSTER_Entity")]
     public class MonsterEntityData

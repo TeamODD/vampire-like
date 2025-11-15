@@ -1,4 +1,4 @@
-using Database.Data.Items;
+using Database.Data.Monsters;
 using SQLite4Unity3d;
 
 namespace Database.DataRepositories
