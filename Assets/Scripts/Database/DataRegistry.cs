@@ -61,6 +61,7 @@ namespace Database
             _evolutions.LoadData(connection, this);
             _monsterBases.LoadData(connection, this);
             _monsterEntities.LoadData(connection, this);
+            _stages.LoadData(connection, this);
         }
         
         // 데이터 리포지토리 필드 추가
@@ -69,6 +70,7 @@ namespace Database
         [OdinSerialize] private ItemEvolutionDataRepository _evolutions;
         [OdinSerialize] private MonsterBaseDataRepository _monsterBases;
         [OdinSerialize] private MonsterEntityDataRepository _monsterEntities;
+        [OdinSerialize] private StageDataRepository _stages;
         
         // 데이터 리포지토리 getter 추가
         public static WeaponDataRepository Weapons => Instance._weapons;
@@ -76,5 +78,6 @@ namespace Database
         public static ItemEvolutionDataRepository Evolutions => Instance._evolutions;
         public static MonsterBaseDataRepository MonsterBases => Instance._monsterBases;
         public static MonsterEntityDataRepository MonsterEntities => Instance._monsterEntities;
+        public static StageDataRepository Stages => Instance._stages;
     }
 }
