@@ -13,5 +13,6 @@ namespace Database.Data.Stages
         [field: SerializeField] [Column("HP_RATE")] public float HpRate { get; private set; }
         [field: SerializeField] [Column("POWER_RATE")] public float PowerRate { get; private set; }
         [field: SerializeField] [Column("SPEED_RATE")] public float SpeedRate { get; private set; }
+        [field: SerializeField] [Column("SCALE_RATE")] public float ScaleRate { get; private set; }
     }
 }

@@ -21,6 +21,7 @@ namespace Runtime.Domains.Monsters.FSM
         {
             base.OnFixedUpdate();
             _rigidbody.MovePosition(_rigidbody.position + _direction.normalized * _fsmBehaviour.Owner.Entity.Speed * Time.fixedDeltaTime);
+            _rigidbody.linearVelocity = Vector2.zero;
         }
     }
 }

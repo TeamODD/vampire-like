@@ -18,8 +18,11 @@ namespace Runtime.Domains.Monsters
         public MonsterEntity(MonsterEntityData entityData, in MonsterSpawnContext spawnContext)
         {
             Hp = entityData.Hp;
+            Hp *= spawnContext.HpRate;
             Power = entityData.Power;
-            Speed = entityData.Speed / 100 * 2;
+            Power *= spawnContext.PowerRate;
+            Speed = entityData.Speed / 100;
+            Speed *= spawnContext.SpeedRate;
             MovementType = spawnContext.MovementType;
         }
     }

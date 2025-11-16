@@ -11,6 +11,7 @@ namespace Database.Data.Stages
         [field: SerializeField] [Column("EVENT_TYPE")] public EventType EventType { get; private set; }
         [field: SerializeField] [Column("EVENT_INTERVAL")] public float EventInterval { get; private set; }
         [field: SerializeField] [Column("MONSTER_ID")] public string MonsterID { get; private set; }
+        [field: SerializeField] [Column("MONSTER_COUNT")] public int MonsterCount { get; private set; }
         [field: SerializeField] [Column("EXP_TIER")] public ExpType ExpType { get; private set; }
     }
 }

@@ -62,6 +62,7 @@ namespace Runtime.Domains.Monsters
                 Animator.runtimeAnimatorController = entityData.AnimatorController;
             }
             transform.position = spawnContext.SpawnPosition;
+            transform.localScale *= spawnContext.ScaleRate;
             _fsm.Initialize(this, spawnContext.Target);
             gameObject.SetActive(true);
         }

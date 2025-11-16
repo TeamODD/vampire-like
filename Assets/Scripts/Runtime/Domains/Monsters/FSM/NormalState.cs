@@ -20,6 +20,7 @@ namespace Runtime.Domains.Monsters.FSM
             base.OnFixedUpdate();
             Vector2 direction = _fsmBehaviour.Target.position - _fsmBehaviour.Owner.transform.position; 
             _rigidbody.MovePosition(_rigidbody.position + direction.normalized * _fsmBehaviour.Owner.Entity.Speed * Time.fixedDeltaTime);
+            _rigidbody.linearVelocity = Vector2.zero;
         }
 
         protected override void OnLateUpdate()
