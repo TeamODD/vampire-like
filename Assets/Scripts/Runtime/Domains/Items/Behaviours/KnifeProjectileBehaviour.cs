@@ -55,7 +55,7 @@ namespace Runtime.Domains.Items.Behaviours
             transform.localScale *= entity.CurrentStat.Area / 100;
             _direction = owner.Entity.Direction;
             _damage = entity.CurrentStat.Power;
-            _speed = entity.CurrentStat.Speed / 100 * 2;
+            _speed = entity.CurrentStat.Speed / 100 * 4;
             _pierce = entity.CurrentStat.Pierce;
             
             // 회전 처리
