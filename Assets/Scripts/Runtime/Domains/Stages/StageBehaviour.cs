@@ -1,9 +1,11 @@
+using System;
 using Database;
 using Database.Data.Stages;
 using Runtime.Domains.Monsters;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using EventType = Database.Data.Stages.EventType;
+using Random = UnityEngine.Random;
 
 namespace Runtime.Domains.Stages
 {
@@ -13,6 +15,11 @@ namespace Runtime.Domains.Stages
         [field: SerializeField] private Transform[] _spawnPositions;
         [field: SerializeField] private Transform _targetTransform;
         [field: SerializeField] private MonsterFactory _monsterFactory;
+
+        private void Start()
+        {
+            SetStage("MAD_FOREST");
+        }
 
         [Button]
         public void SetStage(string stageID)
