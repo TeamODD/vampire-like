@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efa40f971a74e0dbbe871024f34cb59, type: 3}
   m_Name: WEAPON_KNIFE
   m_EditorClassIdentifier: Assembly-CSharp::Runtime.Domains.Items.Strategies.KnifeStrategy
+  _projectilePrefab: {fileID: 6600647326797213892, guid: 3a53f2476a16843a0a83d730c7863227, type: 3}
