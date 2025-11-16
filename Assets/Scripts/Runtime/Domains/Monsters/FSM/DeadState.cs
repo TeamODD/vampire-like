@@ -5,6 +5,9 @@ namespace Runtime.Domains.Monsters.FSM
     /// </summary>
     public class DeadState : MonsterState
     {
-        
+        protected override void OnEnter()
+        {
+            UnityEngine.Object.Destroy(_fsmBehaviour.Owner.gameObject);
+        }
     }
 }
