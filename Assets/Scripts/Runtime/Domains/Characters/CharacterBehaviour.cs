@@ -41,5 +41,13 @@ namespace Runtime.Domains.Characters
                 weapon.Data.Strategy.Use(this, weapon);
             }
         }
+
+        public void SetDirection(Vector2 input)
+        {
+            if(input != Vector2.zero)
+            {
+                Entity.Direction = input.normalized;
+            }
+        }
     }
 }

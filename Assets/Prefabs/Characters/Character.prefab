@@ -488,6 +488,8 @@ MonoBehaviour:
   <Entity>k__BackingField:
     DefaultWeaponID: WEAPON_KNIFE
     MaxWeaponCount: 6
+    Weapons: []
+    Direction: {x: 1, y: 0}
   _spriteRenderer: {fileID: 4606974517096817741}
 --- !u!1 &1417535882003145008
 GameObject:
@@ -881,6 +883,19 @@ MonoBehaviour:
       - m_Target: {fileID: 8156613358954884656}
         m_TargetAssemblyTypeName: Runtime.Domains.Characters.PlayerMovement, Assembly-CSharp
         m_MethodName: set_Direction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6920468245506810994}
+        m_TargetAssemblyTypeName: Runtime.Domains.Characters.CharacterBehaviour,
+          Assembly-CSharp
+        m_MethodName: SetDirection
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
