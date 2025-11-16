@@ -15,6 +15,12 @@ namespace Runtime.Domains.Monsters.FSM
             _fsmBehaviour.Owner.SpriteRenderer.flipX = position.x < _fsmBehaviour.Target.position.x;
         }
 
+        protected override void OnLateUpdate()
+        {
+            base.OnLateUpdate();
+            _fsmBehaviour.Owner.SpriteRenderer.sortingOrder = -Mathf.FloorToInt(_fsmBehaviour.Owner.transform.position.y * 100);
+        }
+
         public virtual void Initialize(MonsterFSMBehaviour fsmBehaviour)
         {
             _fsmBehaviour = fsmBehaviour;

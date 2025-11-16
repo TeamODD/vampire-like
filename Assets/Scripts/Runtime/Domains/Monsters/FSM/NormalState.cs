@@ -26,9 +26,7 @@ namespace Runtime.Domains.Monsters.FSM
         protected override void OnLateUpdate()
         {
             base.OnLateUpdate();
-            Vector3 position = _fsmBehaviour.Owner.transform.position;
-            _fsmBehaviour.Owner.transform.position = new Vector3(position.x, position.y, position.y);
-            _fsmBehaviour.Owner.SpriteRenderer.flipX = position.x < _fsmBehaviour.Target.position.x;
+            _fsmBehaviour.Owner.SpriteRenderer.flipX = _fsmBehaviour.Owner.transform.position.x < _fsmBehaviour.Target.position.x;
         }
     }
 }
