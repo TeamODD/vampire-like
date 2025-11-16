@@ -1,5 +1,6 @@
 using Database.Data.Monsters;
 using SQLite4Unity3d;
+using UnityEngine;
 
 namespace Database.DataRepositories
 {
@@ -11,6 +12,7 @@ namespace Database.DataRepositories
             foreach (var monster in list1)
             {
                 this[monster.EntityID] = monster;
+                monster.AnimatorController = Resources.Load<RuntimeAnimatorController>($"Monsters/Animators/{monster.ResKey}");
             }
         }
     }

@@ -12,5 +12,6 @@ namespace Database.Data.Monsters
         [field: SerializeField] [Column("HP")] public float Hp { get; private set; }
         [field: SerializeField] [Column("POWER")] public float Power { get; private set; }
         [field: SerializeField] [Column("SPEED")] public float Speed { get; private set; }
+        public RuntimeAnimatorController AnimatorController;
     }
 }
