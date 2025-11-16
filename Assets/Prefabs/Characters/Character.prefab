@@ -485,6 +485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9399fe3e0a1e4319aa48ab177948dc71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Runtime.Domains.Characters.CharacterBehaviour
+  <Entity>k__BackingField:
+    DefaultWeaponID: WEAPON_KNIFE
+    MaxWeaponCount: 6
   _spriteRenderer: {fileID: 4606974517096817741}
 --- !u!1 &1417535882003145008
 GameObject:
@@ -900,6 +903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Runtime.Domains.Characters.CharacterMovement
   _rigidbody: {fileID: 2842374047871830988}
+  _spriteRenderer: {fileID: 4606974517096817741}
   _speed: 3
 --- !u!1 &4907128566071386154
 GameObject:
