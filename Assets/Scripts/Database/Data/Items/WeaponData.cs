@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Runtime.Domains.Items;
 using SQLite4Unity3d;
 using UnityEngine;
 
@@ -13,5 +14,6 @@ namespace Database.Data.Items
         [field: SerializeField] [Column("RES_KEY")] public string ResKey { get; private set; }
         [field: SerializeField] [Column("KNOCK_BACK")] public int KnockBack { get; private set; }
         [field: SerializeField] public Dictionary<int, WeaponStatData> Stats { get; private set; } = new();
+        [field: SerializeField] public IWeaponStrategy Strategy { get; set; }
     }
 }
