@@ -53,6 +53,7 @@ namespace Runtime.Domains.Items.Behaviours
         public void Initialize(CharacterBehaviour owner, WeaponEntity entity)
         {
             transform.localScale *= entity.CurrentStat.Area / 100;
+            _knockBack = entity.Data.KnockBack;
             _direction = owner.Entity.Direction;
             _damage = entity.CurrentStat.Power;
             _speed = entity.CurrentStat.Speed / 100 * 4;
