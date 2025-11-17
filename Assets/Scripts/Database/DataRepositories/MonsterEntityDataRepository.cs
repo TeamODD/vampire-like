@@ -12,6 +12,7 @@ namespace Database.DataRepositories
             foreach (var monster in list1)
             {
                 this[monster.EntityID] = monster;
+                monster.Sprite = Resources.Load<Sprite>($"Monsters/Sprites/{monster.ResKey}");
                 monster.AnimatorController = Resources.Load<RuntimeAnimatorController>($"Monsters/Animators/{monster.ResKey}");
             }
         }

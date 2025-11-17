@@ -57,6 +57,10 @@ namespace Runtime.Domains.Monsters
         public void Initialize(MonsterEntityData entityData, in MonsterSpawnContext spawnContext)
         {
             Entity = new(entityData, spawnContext);
+            if (entityData.Sprite != null)
+            {
+                SpriteRenderer.sprite = entityData.Sprite;
+            }
             if(entityData.AnimatorController != null)
             {
                 Animator.runtimeAnimatorController = entityData.AnimatorController;

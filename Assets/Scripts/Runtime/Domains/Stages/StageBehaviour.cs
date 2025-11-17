@@ -1,4 +1,3 @@
-using System;
 using Database;
 using Database.Data.Stages;
 using Runtime.Domains.Monsters;
@@ -21,7 +20,6 @@ namespace Runtime.Domains.Stages
             SetStage("MAD_FOREST");
         }
 
-        [Button]
         public void SetStage(string stageID)
         {
             if (!DataRegistry.Stages.TryGetValue(stageID, out var data))
@@ -32,16 +30,10 @@ namespace Runtime.Domains.Stages
             Initialize(data);
         }
 
-        [Button]
-        public void SetElapsedTime(float elapsedTime)
-        {
-            _entity.ElapsedTime = elapsedTime;
-        }
-
         public void Initialize(StageData data)
         {
             _entity.Data = data;
-            _entity.ElapsedTime = 0;
+            // _entity.ElapsedTime = 0;
 
             foreach (var waveList in data.Waves.Values)
             {
